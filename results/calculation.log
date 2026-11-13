@@ -1,0 +1,17 @@
+DATA {'raw_count': 1140, 'clean_count': 1137, 'invalid_count': 0, 'duplicates': 3, 'selected': 30, 'rule': 'top 10 population per region; tie=id; fixed before optimization', 'source_period': 2020} routes 277
+MILP 876762.0000000156 0.0009887085703295865
+GREEDY 837367.9999999999
+SA 0 837367.9999999999
+SA 1 837367.9999999999
+SA 2 837367.9999999999
+SA 3 837367.9999999999
+SA 4 837367.9999999999
+SA 5 837367.9999999999
+SA 6 837367.9999999999
+SA 7 837367.9999999999
+SA 8 837367.9999999999
+SA 9 837367.9999999999
+SCHEDULE {'drones': 16, 'flights': 148, 'max_distance': 139.11437870113363, 'last_ready': '18:00', 'reserved_places_max': 3, 'all_return_home': True}
+SMALL 685854.0 1.3627269891915983e-06
+STRESS [{'scenario': 'Базовый', 'trips': 876762.0, 'cost': np.float64(2967.7696993733516)}, {'scenario': 'Спрос -30%', 'trips': 695145.8, 'cost': np.float64(2967.7696993733516)}, {'scenario': 'Спрос +30%', 'trips': 928019.6000000001, 'cost': np.float64(2967.7696993733516)}, {'scenario': 'Дальность 160 км', 'trips': 858762.0, 'cost': np.float64(2967.7696993733516)}, {'scenario': 'Отказ Заречный на весь год 3', 'trips': 770266.0, 'cost': np.float64(2967.7696993733516)}]
+DONE 876762.0

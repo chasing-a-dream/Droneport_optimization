@@ -1,0 +1,9 @@
+{
+  "raw_count": 1140,
+  "clean_count": 1137,
+  "invalid_count": 0,
+  "duplicates": 3,
+  "selected": 30,
+  "rule": "top 10 population per region; tie=id; fixed before optimization",
+  "source_period": 2020
+}

@@ -1,0 +1,19 @@
+{
+  "speed_kmh": 180,
+  "service_minutes": 35,
+  "work_minutes": 600,
+  "days": 300,
+  "seats": 10,
+  "range_km": 200,
+  "port_million": 60,
+  "drone_million": 100,
+  "port_annual_million": 5,
+  "drone_annual_million": 11,
+  "flight_million_per_km": 1.5e-05,
+  "reserved_places": 3,
+  "annual_budget_million": 1000,
+  "demand_K": 0.003,
+  "demand_decay_km": 150,
+  "demand_growth": 0.08,
+  "max_two_leg_templates": 90
+}

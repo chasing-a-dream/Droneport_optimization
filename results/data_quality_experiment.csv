@@ -1,0 +1,3 @@
+method,trips,ports,different_ports,population_mae,common_demand_trips
+regional_median,787652.0000000001,13,7,8884.5,765480.0
+nearest3_median,762658.0000000001,14,8,8336.666666666666,769822.0000000001

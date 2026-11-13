@@ -1,0 +1,189 @@
+{
+  "parameters": {
+    "speed_kmh": 180,
+    "service_minutes": 35,
+    "work_minutes": 600,
+    "days": 300,
+    "seats": 10,
+    "range_km": 200,
+    "port_million": 60,
+    "drone_million": 100,
+    "port_annual_million": 5,
+    "drone_annual_million": 11,
+    "flight_million_per_km": 1.5e-05,
+    "reserved_places": 3,
+    "annual_budget_million": 1000,
+    "demand_K": 0.003,
+    "demand_decay_km": 150,
+    "demand_growth": 0.08,
+    "max_two_leg_templates": 90
+  },
+  "data": {
+    "raw_count": 1140,
+    "clean_count": 1137,
+    "invalid_count": 0,
+    "duplicates": 3,
+    "selected": 30,
+    "rule": "top 10 population per region; tie=id; fixed before optimization",
+    "source_period": 2020
+  },
+  "routes": 277,
+  "annual": [
+    {
+      "year": 1,
+      "ports": 4,
+      "fleet": 6,
+      "purchases": 6,
+      "trips": 168704.0,
+      "demand": 2645624.0,
+      "share": 0.06376718687160383,
+      "capex": 840.0,
+      "opex": 99.410814645467,
+      "cost": 939.410814645467,
+      "cum_cost": 939.410814645467
+    },
+    {
+      "year": 2,
+      "ports": 9,
+      "fleet": 11,
+      "purchases": 5,
+      "trips": 294230.0,
+      "demand": 2857308.0,
+      "share": 0.10297454807112148,
+      "capex": 800.0,
+      "opex": 198.98648947093534,
+      "cost": 998.9864894709353,
+      "cum_cost": 1938.3973041164022
+    },
+    {
+      "year": 3,
+      "ports": 13,
+      "fleet": 16,
+      "purchases": 5,
+      "trips": 413828.0,
+      "demand": 3085936.0000000005,
+      "share": 0.13410129049986777,
+      "capex": 740.0,
+      "opex": 289.3723952569492,
+      "cost": 1029.3723952569492,
+      "cum_cost": 2967.7696993733516
+    }
+  ],
+  "main_milp": {
+    "objective": 876762.0000000156,
+    "upper_bound": 877628.8621035549,
+    "gap": 0.0009887085703295865,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "seconds": 13.300592239000025
+  },
+  "greedy": {
+    "objective": 837367.9999999999,
+    "seconds": 1.4966482019999603
+  },
+  "best_total": 876762.0,
+  "small": {
+    "objective": 685854.0,
+    "upper_bound": 685854.9346317565,
+    "gap": 1.3627269891915983e-06,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "seconds": 0.15195471599997745
+  },
+  "small_greedy": 639973.9999999999,
+  "small_sa": 639973.9999999999,
+  "sequential_small": 685854.0000000001,
+  "sequential_details": [
+    {
+      "objective": 160260.0000000012,
+      "upper_bound": 160260.0000000012,
+      "gap": 0.0,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 0.04865963399993234
+    },
+    {
+      "objective": 419110.0,
+      "upper_bound": 419110.0665159592,
+      "gap": 1.5870764058892992e-07,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 0.01102894500002094
+    },
+    {
+      "objective": 685854.0,
+      "upper_bound": 685854.0,
+      "gap": 0.0,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 0.009957067000073039
+    }
+  ],
+  "stress": [
+    {
+      "scenario": "Базовый",
+      "trips": 876762.0,
+      "cost": 2967.7696993733516
+    },
+    {
+      "scenario": "Спрос -30%",
+      "trips": 695145.8,
+      "cost": 2967.7696993733516
+    },
+    {
+      "scenario": "Спрос +30%",
+      "trips": 928019.6000000001,
+      "cost": 2967.7696993733516
+    },
+    {
+      "scenario": "Дальность 160 км",
+      "trips": 858762.0,
+      "cost": 2967.7696993733516
+    },
+    {
+      "scenario": "Отказ Заречный на весь год 3",
+      "trips": 770266.0,
+      "cost": 2967.7696993733516
+    }
+  ],
+  "worst_node": {
+    "node": 1,
+    "name": "Заречный",
+    "trips": 307332.0
+  },
+  "robust_best": {
+    "candidate": 11,
+    "base": 876762.0,
+    "worst": 695145.8,
+    "cost": 2967.7696993733516
+  },
+  "robust_base_candidate": 11,
+  "routing": {
+    "bfs_mean_nodes": 16.0,
+    "astar_mean_nodes": 8.389655172413793,
+    "time_improved_pairs": 308,
+    "pairs": 870
+  },
+  "game": {
+    "full": {
+      "value": 193902.00000000006,
+      "visited_nodes": 96,
+      "leaves": 68,
+      "seconds": 2.4556000084885454e-05
+    },
+    "alpha_beta": {
+      "value": 193902.00000000006,
+      "visited_nodes": 59,
+      "leaves": 37,
+      "seconds": 1.1206999943169649e-05
+    }
+  },
+  "schedule": {
+    "drones": 16,
+    "flights": 148,
+    "max_distance": 139.11437870113363,
+    "last_ready": "18:00",
+    "reserved_places_max": 3,
+    "all_return_home": true
+  }
+}
